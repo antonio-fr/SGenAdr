@@ -47,7 +47,7 @@ Finally in an Administrator CMD :
 
 If you have a Nano S, connect it and enter PIN (do not enter in any app).
 
-Follow the instructions wrote during run.
+Follow the instructions displayed during run.
 
 
 ## Output
