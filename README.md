@@ -15,6 +15,15 @@ NanoS is optional.
 - libusb-1.0-0-dev / libusb-devel
 - python2.7-dev(el)
 
+Finally :
+
+    pip install ledgerblue
+
+For a full and quick install on Debian, you can use install bash script included:
+
+    sudo bash -x debian-install.sh
+
+
 If you want to use SGenAdr **with a non-root user** and the NanoS, create a file */etc/udev/rules.d/20-nanos.rules* containing :
 ```
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="2c97", ATTRS{idProduct}=="0000", MODE="0660", TAG+="uaccess", TAG+="udev-acl", OWNER="<UNIX username>"
@@ -23,10 +32,6 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="2c97", ATTRS{idProduct}=="0001", MODE="0660
 Then restart udev (or just reboot the machine):
 
     udevadm trigger
-
-Finally :
-
-    pip install ledgerblue
 
 
 ### Windows :
