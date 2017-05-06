@@ -170,7 +170,7 @@ if __name__ == '__main__':
 	f = open('address_list.csv', 'wb')
 	fpv = open('PvKeysList.json', 'wb')
 	f.write("index,pubkey,address\r\n")
-	fpv.write("[")
+	fpv.write("pv_key_list=[")
 	rndg = random.SystemRandom()
 	for i in xrange(numadr):
 		candint = 0
@@ -181,7 +181,7 @@ if __name__ == '__main__':
 				random2_from_nanos = bytes(nanos_dongle.exchange(bytes(getrandom.decode('hex')))) #     6x2
 				random_from_nanos = random1_from_nanos + random2_from_nanos
 			else:
-				random_from_nanos = bytes(os.urandom(384))
+				random_from_nanos = bytes(os.urandom(384)) # from OS, not from NanoS
 			assert random_from_nanos.__len__() == 384
 			rnd_nano_list = []
 			for x in range(12):

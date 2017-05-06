@@ -19,7 +19,7 @@ Finally :
 
     pip install ledgerblue
 
-For a full and quick install on Debian, you can use install bash script included:
+For a full and quick install on Debian, you can use the install bash script included:
 
     sudo bash -x debian-install.sh
 
